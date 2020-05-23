@@ -12,12 +12,23 @@ def longest_word(str_):
         несколько, самое левое в строке).
         в случае если
     """
-
     # write your code here
-    return ''  # write return value here
+    znaki = '!?.,+=:;|/*<>[]{}@#$%^&()_'
+    for i in str_:
+        if i in znaki:
+            str_ = str_.replace(znaki, "")
+    listA = str_.split()
+
+    idWord = 0
+    for i in range(1, len(listA)):
+        if len(listA[idWord]) < len(listA[i]):
+            idWord = i
+
+
+    return "Самое длинное слово в предложении", listA[idWord]
 
 
 if __name__ == '__main__':
     # здесь можно сделать ввод из консоли и проверить работу функции
-    str_ = ''
+    str_ = input("Введите строку через пробел: ")
     print(longest_word(str_))
