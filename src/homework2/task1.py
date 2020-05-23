@@ -21,12 +21,10 @@ def total_sum(m, n, s):
   if countKop >= 100:
     countRub = countRub + (countKop // 100)
     countKop = countKop % 100
-    
   return "Общая цена {} рублей {} копеек".format(countRub, countKop)  # write return value here
 
 
 if __name__ == '__main__':
   # здесь можно сделать ввод из консоли и проверить работу функции
-  m, n, s = '', '', ''
   m, n, s = int(input("Цена одной вещи\nрублей: ")), int(input("копеек: ")), int(input("количество: "))
   print(total_sum(m, n, s))
