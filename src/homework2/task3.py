@@ -12,12 +12,17 @@ def sub_string(str_):
     :param str_: входная строка
     :return: строка. Получившееся выражение
     """
-
     # write your code here
-    return ''  # write return value here
+
+    newStr = ""
+    for i in str_:
+        if i not in newStr and i != " ":
+            newStr = newStr + i
+
+    return "Строка без повторяющихся символов и пробелов: {}".format(newStr)  # write return value here
 
 
 if __name__ == '__main__':
     # здесь можно сделать ввод из консоли и проверить работу функции
-    str_ = ''
+    str_ = input("Введите строку: ")
     print(sub_string(str_))
