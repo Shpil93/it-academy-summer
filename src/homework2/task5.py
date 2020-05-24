@@ -11,10 +11,20 @@ def fibonacci(n):
     """
 
     # write your code here
-    return ''  # write return value here
+    """
+    a0 = a1 = 1
+    for i in range(n-2):
+        a0, a1 = a1, a0 + a1
+    return "N-ое число Фибоначчи: {}".format(a1)  # write return value here
+    """
 
+    if n == 0 or n == 1:
+        return 1
+    else:
+        return fibonacci(n-1) + fibonacci(n+1)
 
 if __name__ == '__main__':
     # здесь можно сделать ввод из консоли и проверить работу функции
     n = 0
+    n = int(input("Введите n-ое число Фибоначчи: "))
     print(fibonacci(n))
