@@ -14,10 +14,17 @@ def count_letters(str_):
     # write your code here
     low_number = 0
     up_number = 0
+
+    for i in str_:
+        if "a" <= i <= "z":
+            low_number = low_number + 1
+        elif "A" <= i <= "Z":
+            up_number = up_number + 1
+
     return (low_number, up_number)  # write return value here
 
 
 if __name__ == '__main__':
     # здесь можно сделать ввод из консоли и проверить работу функции
-    str_ = ''
+    str_ = input("Введите строку: ")
     print(count_letters(str_))
