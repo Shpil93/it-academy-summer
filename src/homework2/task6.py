@@ -11,12 +11,21 @@ def palindrom(n):
     :param n: Число.
     :return: Bool. True или False. Является ли число палиндромом.
     """
-
     # write your code here
-    return ''  # write return value here
+    copyN = n
+    revN = 0
 
+    while n > 0:
+        revN = revN * 10 + n % 10
+        n = n // 10
+
+    if revN == copyN:
+        return True
+    else:
+        return False
 
 if __name__ == '__main__':
     # здесь можно сделать ввод из консоли и проверить работу функции
     n = 0
+    n = int(input("Введите число: "))
     print(palindrom(n))
