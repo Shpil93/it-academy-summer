@@ -6,13 +6,13 @@ Output: Общая цена 9 рублей 60 копеек
 '''
 
 def total_sum(m, n, s):
-	countRub = m * s
-	countKop = n * s
-	if countKop >= 100:
-		countRub = countRub + (countKop // 100)
-		countKop = countKop % 100
-	return "Общая цена {} рублей {} копеек".format(countRub, countKop)  # write return value here
+    countRub = m * s #считаем количество рублей
+    countKop = n * s #считаем количество рублей
+    if countKop >= 100: #если больше 100 копеек переводим значение в рубли
+        countRub = countRub + (countKop // 100)  #считаем количество рублей с учетом копеек
+        countKop = countKop % 100 #считаем количество копеек
+    return "{} rubles {} kopecks".format(countRub, countKop)  # write return value here
 
 if __name__ == '__main__':
-	m, n, s = int(input("Цена одной вещи\nрублей: ")), int(input("копеек: ")), int(input("количество: "))
-	print(total_sum(m, n, s))
+    m, n, s = int(input("Цена одной вещи\nрублей: ")), int(input("копеек: ")), int(input("количество: ")) #ввод значений
+    print(total_sum(m, n, s))
