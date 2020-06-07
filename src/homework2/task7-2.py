@@ -5,7 +5,6 @@
 '''
 
 inp = input("Введите числа: ")
-#inp = '1 1 2 2 3 3 45 6 6 9 0 3'
 listA = inp.split()
 even = 0
 odd = 0
@@ -22,9 +21,6 @@ listB = []
 for el in listA:
     n = listA.count(el)
     if n >= 1:
-        if not el in listB:
+        if (not el) in listB:
             listB.append(el)
 print("Уникальные числа", listB)
-
-#listA = set(listA)  #альтернативный посик уникальных чисел через множества
-#print("Уникальные числа последователбьности: ", listA)

@@ -15,18 +15,15 @@ def longest_word(str_):
     # write your code here
     znaki = '.?!:;*=/|%()_-+{}[]<>~№` '
     for smv in znaki:  # проходимся по строке
-        str_ = str_.replace(str(smv), ",")  #заменяем знаки
-    listA = str_.split(",")  #делаем из строки список по ,
+        str_ = str_.replace(str(smv), ",")
+    listA = str_.split(",")
 
     # print(listA, len(listA))  #проверка списка и его длины
 
     idWord = 0
-    for i in range(1, len(listA)):  #ищем самое длинное слово в списке
+    for i in range(1, len(listA)):
         if len(listA[idWord]) < len(listA[i]):
             idWord = i
-
-    # print(listA[idWord], len(listA[idWord]))  #проверка самого длинного слова в списке
-
     return "Самое длинное слово: {}".format(listA[idWord])
 
 
