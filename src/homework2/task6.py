@@ -24,6 +24,7 @@ def palindrom(n):
     else:
         return False
 
+
 if __name__ == '__main__':
     # здесь можно сделать ввод из консоли и проверить работу функции
     n = 0
