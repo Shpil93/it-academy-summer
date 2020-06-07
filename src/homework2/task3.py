@@ -19,7 +19,7 @@ def sub_string(str_):
         if i not in newStr and i != " ":
             newStr = newStr + i
 
-    return "Строка без повторяющихся символов и пробелов: {}".format(newStr)  # write return value here
+    return "Строка без повторяющихся символов: {}".format(newStr)  # write return value here
 
 
 if __name__ == '__main__':

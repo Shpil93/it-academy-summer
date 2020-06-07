@@ -3,7 +3,8 @@
 	- количество гласных
 	- количество согласных
 	- количество пробелов
-Возвращать полученные значения функция должна через return. Вывод значений на экран должен выполнятся в основной программе
+Возвращать полученные значения функция должна через return.
+Вывод значений на экран должен выполнятся в основной программе.
 '''
 
 
@@ -15,11 +16,11 @@ def vowel_count(str):
     sogl = set("bcdfghjklmnpqrstvwxzBCDFGHJKLMNPQRSTVWXZ")
     pr = set(" ")
     for alphabet in str:
-        if alphabet in gl: #выбираем и считаем гласные
+        if alphabet in gl:
             countGl = countGl + 1
-        elif alphabet in sogl: #выбираем и считаем согласные
+        elif alphabet in sogl:
             countSogl = countSogl + 1
-        elif alphabet in pr: #выбираем и считаем пробелы
+        elif alphabet in pr:
             countPr = countPr + 1
     return countGl, countSogl, countPr
 
