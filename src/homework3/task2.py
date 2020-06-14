@@ -21,4 +21,3 @@ print(sp3.pop(1))
 sp4 = sp1[:]
 sp4.insert(0, '2a')
 print(sp4, sp1)
-
