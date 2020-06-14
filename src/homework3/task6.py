@@ -8,3 +8,10 @@
 Распечатайте полученный список.
 '''
 
+
+lst = [9, 8, 7, 0, 5, 6, 0, 3, 2, 0, 1, 0]
+for i in lst:
+    if i == 0:
+        lst.append(i)
+        lst.remove(i)
+print(lst)
