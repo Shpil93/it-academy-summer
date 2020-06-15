@@ -7,6 +7,14 @@
 Важно: 1 1 1 - это 3 пары, 1 1 1 1 - это 6 пар
 '''
 
+
+str = "1 2 3 4 5 6 7 1 2 3 4 5 8 9 1"
+lst = str.split()
+lst_dct = dict.fromkeys(lst, 0)
+for i in lst:
+    lst_dct[i] += 1
+print(lst_dct)
+
 '''
 #способ нашел в интернете
 from collections import Counter
@@ -15,11 +23,3 @@ lst = str.split()
 c = Counter(lst)
 print(c)
 '''
-
-#2 способ
-str = "1 2 3 4 5 6 7 1 2 3 4 5 8 9 1"
-lst = str.split()
-lst_dct = dict.fromkeys(lst, 0)
-for i in lst:
-    lst_dct[i] += 1
-print(lst_dct)
