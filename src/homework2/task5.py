@@ -9,14 +9,20 @@ def fibonacci(n):
     :param n: Номер числа Фибоначчи.
     :return: Число. n-ое число Фибоначчи
     """
-    if n == 1 or n == 2:
+    # использовал Ваш метод решения задачи
+    if n in (1, 2):
         return 1
-    if n > 2:
-        return fibonacci(n - 1) + fibonacci(n - 2)
+    else:
+        if not cache.get(n-1):
+            cache[n-1] = fibonacci(n-1)
+        if not cache.get(n-2):
+            cache[n-2] = fibonacci(n-2)
+        return cache.get(n-1) + cache.get(n-2)
 
 
 if __name__ == '__main__':
     # здесь можно сделать ввод из консоли и проверить работу функции
+    cache = {}
     n = 0
     n = int(input("Введите n-ое число Фибоначчи: "))
     print(fibonacci(n))

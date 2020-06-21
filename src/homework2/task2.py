@@ -13,7 +13,8 @@ def longest_word(str_):
         в случае если
     """
     # write your code here
-    znaki = '.?!:;*=/|%()_-+{}[]<>~№` '
+    import string
+    znaki = string.punctuation
     for smv in znaki:  # проходимся по строке
         str_ = str_.replace(str(smv), ",")
     listA = str_.split(",")
