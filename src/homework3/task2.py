@@ -11,13 +11,13 @@
 '''
 
 
-sp1 = [c + d for c in ["a", "b"] for d in ["b", "c", "d"]]
+sp1 = [c + d for c in ['a', 'b'] for d in ['b', 'c', 'd']]
 print(sp1)
 
 sp2 = sp1[::2]
 print(sp2)
 
-sp3 = [c + d for c in ["1", "2", "3", "4"] for d in ["a"]]
+sp3 = [c + d for c in ['1', '2', '3', '4'] for d in ['a']]
 print(sp3)
 
 print(sp3.pop(1))
